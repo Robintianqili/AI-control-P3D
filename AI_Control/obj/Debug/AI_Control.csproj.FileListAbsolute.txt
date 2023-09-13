@@ -1,0 +1,12 @@
+D:\2023\qiqi\TianQI\AI_Control\bin\Debug\AI_Control.exe.config
+D:\2023\qiqi\TianQI\AI_Control\bin\Debug\AI_Control.exe
+D:\2023\qiqi\TianQI\AI_Control\bin\Debug\AI_Control.pdb
+D:\2023\qiqi\TianQI\AI_Control\bin\Debug\LockheedMartin.Prepar3D.SimConnect.dll
+D:\2023\qiqi\TianQI\AI_Control\obj\Debug\AI_Control.csprojAssemblyReference.cache
+D:\2023\qiqi\TianQI\AI_Control\obj\Debug\AI_Control.AI_Main.resources
+D:\2023\qiqi\TianQI\AI_Control\obj\Debug\AI_Control.Properties.Resources.resources
+D:\2023\qiqi\TianQI\AI_Control\obj\Debug\AI_Control.csproj.GenerateResource.cache
+D:\2023\qiqi\TianQI\AI_Control\obj\Debug\AI_Control.csproj.CoreCompileInputs.cache
+D:\2023\qiqi\TianQI\AI_Control\obj\Debug\AI_Control.csproj.CopyComplete
+D:\2023\qiqi\TianQI\AI_Control\obj\Debug\AI_Control.exe
+D:\2023\qiqi\TianQI\AI_Control\obj\Debug\AI_Control.pdb
