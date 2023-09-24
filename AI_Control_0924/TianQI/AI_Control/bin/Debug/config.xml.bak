@@ -1,0 +1,67 @@
+<?xml version ="1.0" encoding="GB2312"?>
+<SimConfig>
+	
+	<ID>2000</ID>
+	
+	<P3Dpath>C:\Users\KGD\Documents\Prepar3D v5 Files</P3Dpath>
+
+	<jsbpath>E:\lyb(2023.0207)\1v1\flightsim\JSBSim</jsbpath>
+
+	<P3DRunpath>E:\Lockheed Martin\Prepar3D v4\</P3DRunpath>
+	
+	<P3D_Arg>Host11111</P3D_Arg>
+	
+	<Main_model_Tile>J-11B Flanker B+</Main_model_Tile>
+	<Tagert_model_Tile>J-11B Flanker B+</Tagert_model_Tile>
+	<Missile_model_Tile>PL15</Missile_model_Tile>
+	
+
+	<!-- jbsim Ip -->
+    <JbsimIP>127.0.0.1</JbsimIP>
+	<!-- jbsim udpInput port -->
+    <JbsimPort>5139</JbsimPort>
+	<!-- jbsim socketInput port -->
+	<Jbsim_cmdPort>1137</Jbsim_cmdPort>
+	
+	<!-- jbsim socketOutput port -->
+	<Jbsim_socketOutput_Port>1138</Jbsim_socketOutput_Port>
+
+
+	<!-- 服务IP   192.168.1.189  -->
+	<Server_IP>192.168.1.189</Server_IP>
+	<!--  轨迹监听端口   -->
+   	 <Server_Port>9980</Server_Port>
+	<!--  命令监听端口   -->
+   	 <Server_Fire_Port>9982</Server_Fire_Port>
+	
+
+	<!--  服务广播轨迹 端口 -->
+    	<Sever_Board_Port>9988</Sever_Board_Port>
+	<!--  服务广播导调 端口 -->
+	<Server_Cmd_Board_Port>9989</Server_Cmd_Board_Port>
+
+	<!--  Server_path -->
+	<Server_path>\\192.168.1.189\\simresult</Server_path>
+	
+	
+	
+	<!-- p3d 启动 第  s  加载AI craft   -->
+	<start_p3d>20</start_p3d>
+	<!-- p3d  加载ai  延迟 s 加载 missile  -->
+    <Delay>5</Delay>
+
+	<!-- 加载 missile 时间间隔 -->
+	<load_model_delay>5</load_model_delay>
+	
+	
+	<!-- 注册码 -->
+	<RegKey>9B-82-07-3D-80-2A-00-58-69-F7-7E-57-74-3B-39-96-47-80-D2-E8-24-15-09-B2-62-16-76-7D-64-26-ED-59-33-9C-1E-60-3A-8C-F4-17-BA-48-EF-C2-50-57-78-ED</RegKey>
+	
+	<!-- 多通道下位机监听端口 -->
+	<Client_Port>8006</Client_Port>
+	
+	
+	
+	
+	
+</SimConfig>
