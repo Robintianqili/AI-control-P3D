@@ -146,16 +146,27 @@ Update them, Register, and define the structure.
         };
 
 ## New Update on Sunday, 12/31/2023, Merry Chrismas!
+
 finally back to work, last updates in 2023.
+
 ### 1. setting JSBsim interface
+
 Plane choice is decided by jsbsim args, e.g.:
+
     socket.xml C172_test.xml --realtime
+    
 ### 2. using socket.xml to define args and frequency
+
 In Data_out folder:
+
     set input ip to localhost, port 1138, protocol UDP, rate = 100
+    
     <output name="127.0.0.1" type="SOCKET" port="1138"  protocol="UDP" rate="100" precision = "10">
+    
 Plane Information, Plane vectors included for now:
+
     Plane position and attitude:
+    
         <property> position/h-sl-meters </property>
         <property> velocities/vtrue-fps </property>
         <property>position/lat-gc-deg</property>
@@ -163,46 +174,72 @@ Plane Information, Plane vectors included for now:
         <property> attitude/roll-rad</property>
         <property> attitude/pitch-rad</property>
         <property> attitude/heading-true-rad</property>
+        
     Plane speed vectors in all directions:
+    
         <property> velocities/v-north-fps</property>
         <property> velocities/v-east-fps</property> 
         <property> velocities/v-down-fps</property> 
         <property> velocities/mach</property>
+        
     Plane Angular Velocity:
+    
         <property> velocities/phidot-rad_sec</property>
         <property> velocities/thetadot-rad_sec</property>
         <property> velocities/psidot-rad_sec</property>
+        
     Plane vertical accelerations:
+    
         <property> accelerations/Nz</property>
+        
     Plane fuel:
+    
         <property> propulsion/total-fuel-lbs</property>
+        
 Output format, the data should follow csv format and their sequence defined in sock.xml, e.g.:
+
     "<LABELS> ,Time,h-sl-meters,vtrue-fps,lat-gc-deg,long-gc-deg,roll-rad,pitch-rad,heading-true-rad,
     v-north-fps,v-east-fps,v-down-fps,mach,phidot-rad sec,thetadot-rad sec,psidot-rad sec,Nz,total-fuel-lbs\n"
 
 ### 3. C172_test.xml launch args
+
 Open C172_test.xml
+
 Set aircraft to c172r, initial it as reset00
+
     <use aircraft="c172r" initialize="reset00"/>
+    
 c172r means it follows aircraft/c172r/c172r.xml.
+
 reset00 means at aircraft/c172r/reset00.xml, setting initial altitude, position, velocity.
+
 define input port:
+
     <input port="5140" type="QTJSBSIM" protocol="UDP" rate="100">
+    
 define input variables, which is also the output gained from algroithm, csv format applied.
+
     <property> fcs/throttle-cmd-norm[0]</property>
     <property> fcs/elevator-cmd-norm </property> 
     <property> fcs/aileron-cmd-norm </property> 
     <property> fcs/rudder-cmd-norm </property> 
+    
 define start/end time for simulation
+
     <run start="0.0" end="7200" dt="0.008333">
+    
 #### run mode set to "-realtime"
+
 #### add jsbsim and its related files to the project.
 
-### Complete main functionality of the project
 
-launch jsbsim,
-using thread, receive input from jsbsim udp, extract position, altitiude, update to P3D.
+### Complete main functionality of the project
+Launch jsbsim,
+
+Using thread, receive input from jsbsim udp, extract position, altitiude, update to P3D.
+
 According to jsbsim reference manual, we could complete a auto control for horizonal stabiliser trim.
+
 
 
 
