@@ -172,5 +172,22 @@ namespace AI_Control
 
             p3d_api.Update_craft_Pos(0, p3d_api.s1);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // start jsbsim
+            jsbsim_interface.Start_jsb(p3d_api);
+
+        }
+
+        private void Btn_manRoll_Click(object sender, EventArgs e)
+        {
+            jsbsim_interface.Set_Manu_mode(10);
+        }
+
+        private void btn_auto_roll_Click(object sender, EventArgs e)
+        {
+            jsbsim_interface.Set_Manu_mode(0);
+        }
     }
 }
