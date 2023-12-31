@@ -9,6 +9,8 @@ According to Reference Manual P27-P30
 
 ### Implementation of a Simple Proportional Control Method for Aircraft Roll Angle
   One possibility is to simply command the ailerons based on the roll angle. This is called proportional control, because the output is simply the input multiplied by a value – the output is proportional to the input. The autopilot aileron command is sent to the main flight control system and summed in to the aileron command channel. There are a couple of nuances to this autopilot arrangement, however. For instance, it is always on. A better arrangement is shown on the next page.
+  
+![image](log/Trim.png)
 
   The objective is to acquire the aircraft's roll angle through a controlled process. Commence by employing a limiter mechanism to confine the angular variation within a prescribed range, specifically, between -0.255 and 0.255 radians.
 
